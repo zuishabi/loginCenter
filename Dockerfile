@@ -19,6 +19,7 @@ WORKDIR /
 COPY --from=build-stage /LoginCenter/Server /Server
 
 EXPOSE 8888
+EXPOSE 7777
 
 USER nobody
 

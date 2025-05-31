@@ -2,6 +2,7 @@ package main
 
 import (
 	"FunGoLoginCenter/database"
+	gRPCProto "FunGoLoginCenter/grpc"
 	"FunGoLoginCenter/utils"
 	"context"
 	"crypto/md5"
@@ -40,6 +41,7 @@ func main() {
 	database.Update()
 	initBF()
 	initServiceCenterClient()
+	go gRPCProto.InitGRPCServer()
 	r := gin.Default()
 	r.POST("/login", login)
 	r.POST("/register", register)

@@ -6,7 +6,7 @@ import (
 )
 
 // mysql-login:3306
-var dsn = "root:861214959@tcp(127.0.0.1:3308)/game?charset=utf8mb4&parseTime=True&loc=Local"
+var dsn = "root:861214959@tcp(mysql-login:3306)/game?charset=utf8mb4&parseTime=True&loc=Local"
 var Db *gorm.DB
 
 func Start() error {
